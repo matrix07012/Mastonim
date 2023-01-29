@@ -1,17 +1,21 @@
 import times
+import json
+import jsony
 
 import media
 import account
 import emoji
 import preview_card
 import poll
+import utilities
+
 
 type
   Mention* = ref object of RootObj
     id*: string
     username*: string
     url*: string
-    account*: Account
+    acct*: Account
 
 type
   Tag* = ref object of RootObj
@@ -48,3 +52,5 @@ type
     card*: PreviewCard
     poll*: Poll
 
+proc parse_status_json*(j: string): Status =
+  var out_obj: Status = j.fromJson(Status)

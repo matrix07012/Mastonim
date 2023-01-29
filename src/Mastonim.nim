@@ -1,4 +1,4 @@
-import MastoNim/status
+import Mastonim/status
 
 type
     Mastodon* = object

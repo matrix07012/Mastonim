@@ -2,7 +2,9 @@
 <project version="4">
   <component name="NimToolchainService">
     <option name="rootPaths">
-      <list />
+      <list>
+        <option value="$USER_HOME$/.nimble" />
+      </list>
     </option>
   </component>
 </project>
